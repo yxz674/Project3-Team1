@@ -1,0 +1,116 @@
+
+/*global setting to test if website works*/
+*{
+    padding :0;
+    margin:0;
+    box-sizing: border-box;
+}
+html{
+    /*by defaul 1 rem = 16px.If just change html font-size to different px such as 10px then 1 rem = 10px.*/
+    /*instead font-size to be 10px, can set font-size: 62.5%（10px/16px = 0.625 =62.5%)*/
+    font-size:62.5%;
+}
+/*body set up:line heights by default is 1, font-weight by default is 400*/
+body{
+    line-height:1;
+    font-weight:400;
+    font-family:"Cormorant Garamond", sans-serif;
+    color:white;
+    background-color:rgb(58, 54, 54);
+}
+
+.navbar {
+    font-size: 2.5rem;
+    list-style:none;
+    margin-left: 2rem;
+    padding: inherit; 
+    overflow:hidden;
+    color:white; 
+    background-color:  rgb(58, 54, 54)
+}
+
+.dropdown-item{
+    color: #6D8092; 
+}
+
+
+
+
+.section-hero{
+    background-color: rgb(58, 54, 54);
+    padding: 9.6rem 2rem 0 2rem;
+}
+.hero{
+    max-width: 130rem;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9.6rem;
+    align-items:center;
+}
+.heading-primary{
+    font-size:4.2rem;
+    font-weight:700;
+    line-height:1.05;
+    color:white;
+    letter-spacing: -0.5px;
+    margin-bottom:3.2rem;
+    align-items:center;
+}
+.heading-primary span{
+    font-style: italic;
+    font-size: 2.5rem;
+    float: right;
+}
+
+.hero-description{
+    font-size:2.5rem;
+    line-height:1.5;
+    margin-top: 6rem;
+    margin-bottom:4.8rem;
+}
+
+.btn:link, .btn:visited{
+    display:inline-block;
+    font-size:1.7rem;
+    font-weight:600;
+    color:rgb(58, 54, 54);
+    text-decoration:none;
+    padding:1.6rem 2.2rem;
+    border-radius: 3rem;
+    transition: all 0.5s;
+}
+.btn--select:link, .btn--select:visited{
+    background-color: white;
+    margin-right:1.6rem;
+}
+.btn--select:hover,.btn--select:active{
+    background-color:darkslategray;
+    color:whitesmoke;
+    font-size:bold;
+    box-shadow: inset 0 0 0 2px whitesmoke;
+}
+
+.hero-img{
+    width:100%;
+}
+
+
+
+@media(max-width:800px){
+    .navbar.bg-light{
+        font-size:20px;
+        background-color:  rgb(58, 54, 54) !important;    
+    }
+    .navbar-collapse{
+        font-size:15px;
+        background-color:  rgb(58, 54, 54);
+    }
+    .dropdown-item{
+            color: #6D8092; 
+    }
+    .navbar{
+        background-color:  rgb(58, 54, 54);
+        padding:inherit;
+    }
+}
