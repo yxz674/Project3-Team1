@@ -2,6 +2,7 @@ CREATE TABLE brewery_info (
     brewery_id INT UNIQUE PRIMARY KEY,
     name VARCHAR(50),
     street VARCHAR(50),
+    brewery_type VARCHAR(15),
     city VARCHAR(50),
     state VARCHAR(50),
     website VARCHAR(100),
