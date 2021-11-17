@@ -11,6 +11,7 @@ CREATE TABLE brewery_info (
 );
 
 CREATE TABLE beer_brewery_id (
+    index INT,
     beer_id INT UNIQUE PRIMARY KEY,
     brewery_id INT
     FOREIGN KEY (brewery_id) REFERENCES brewery_info(id)
