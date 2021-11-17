@@ -398,3 +398,8 @@ L.control.layers(baseMaps, overlayMaps, {
   //   myMap.addLayer(markers);
   
   // });
+
+
+
+  // create function to make top ten charts for user-selected brewery/rating/beer attributes
+  // week 14, day 2, activity 9
