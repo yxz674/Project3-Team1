@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- pie chart js -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css"> -->
+    <title>BHC Beer&Brewing Info</title>
+    
+    
+
+    <!-- Marker cluster JavaScript code -->
+    <!-- <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script> -->
+
+    <!-- Leaflet CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" /> -->
+
+    <!-- Marker cluster CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css"> -->
+
+    <!-- Leaflet JavaScript code -->
+    <!-- <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script> -->
+
+    <!-- d3 reference -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Our CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+
+  </head>
+
+  <body>
+    <div class = "topnav">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div class="mdl-layout-spacer">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="brewingplots.html">Data Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mapping.html">Mapping</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="beerdata.html">Brewery List</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h2>Brewing and Beer Data Analysis</h2>
+            <p>Use the interactive charts below to explore the dataset</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center"">
+            <h5>Comparing Brewing Type for Alll 50 States</h5>
+            <div id="myDIV">
+              <link rel="stylesheet" href="css\brewingbarplot.css">
+              <button class="btn active" onclick="changeData(0)">micro</button>
+              <button class="btn" onclick="changeData(1)">brewpub</button>
+              <button class="btn" onclick="changeData(2)">planning</button>
+              <button class="btn" onclick="changeData(3)">contract</button>
+              <button class="btn" onclick="changeData(4)">regional</button>
+              <button class="btn" onclick="changeData(5)">proprietor</button>
+              <button class="btn" onclick="changeData(6)">large</button>
+              <button class="btn" onclick="changeData(7)">closed</button>
+              <button class="btn" onclick="changeData(8)">nano</button>
+              <button class="btn" onclick="changeData(9)">bar</button>
+            </div>
+            <canvas id="chart-0"></canvas>
+            <hr>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 text-center">
+            <h4>Display Brewing Type for Each State</h4>
+            <select id="selDataset">
+                <option value="alabama">Alabama</option>
+                <option value="alaska">Alaska</option>
+                <option value="arizona">Arizona</option>
+                <option value="arkansas">Arkansas</option>
+                <option value="california">California</option>
+                <option value="colorado">Colorado</option>
+                <option value="connecticut">Connecticut</option>
+                <option value="delaware">Delaware</option>
+                <option value="district_of_columbia">District of Columbia</option>
+                <option value="florida">Florida</option>
+                <option value="georgia">Georgia</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="idaho">Idaho</option>
+                <option value="illinois">Illinois</option>
+                <option value="indiana">Indiana</option>
+                <option value="iowa">Iowa</option>
+                <option value="kansas">Kansas</option>
+                <option value="kentucky">Kentucky</option>
+                <option value="louisiana">Louisiana</option>
+                <option value="maine">Maine</option>
+                <option value="maryland">Maryland</option>
+                <option value="massachusetts">Massachusetts</option>
+                <option value="michigan">Michigan</option>
+                <option value="minnesota">Minnesota</option>
+                <option value="mississippi">Mississippi</option>
+                <option value="missouri">Missouri</option>
+                <option value="montana">Montana</option>
+                <option value="nebraska">Nebraska</option>
+                <option value="nevada">Nevada</option>
+                <option value="new_hampshire">New Hampshire</option>
+                <option value="new_jersey">New Jersey</option>
+                <option value="new_mexico">New Mexico</option>
+                <option value="new_york">New York</option>
+                <option value="north_carolina">North Carolina</option>
+                <option value="north_dakota">North Dakota</option>
+                <option value="ohio">Ohio</option>
+                <option value="oklahoma">Oklahoma</option>
+                <option value="oregon">Oregon</option>
+                <option value="pennsylvania">Pennsylvania</option>
+                <option value="rhode_island">Rhode Island</option>
+                <option value="south_carolina">South Carolina</option>
+                <option value="south_dakota">South Dakota</option>
+                <option value="tennessee">Tennessee</option>
+                <option value="texas">Texas</option>
+                <option value="utah">Utah</option>
+                <option value="vermont">Vermont</option>
+                <option value="virginia">Virginia</option>
+                <option value="washington">Washington</option>
+                <option value="west_virginia">West Virginia</option>
+                <option value="wisconsin">Wisconsin</option>
+                <option value="wyoming">Wyoming</option>
+            </select>
+          </div>
+          <div class="col-md-5 text-center">
+            <h4>Comparing XXXXXXXXXX</h4>
+            <div id=""></div>
+          </div>
+        </div>
+    </div>
+
+    <div id="plot"></div>
+    <div id="pie"></div>
+    
+    <!-- bar chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <script src="brewplotspage\brewingbarplot.js"></script>
+    <!-- pie chart js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="brewplotspage\brewingdta.js"></script>
+    <script src="brewplotspage\brewingpieplot.js"></script>
+  </body>
+</html>
