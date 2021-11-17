@@ -1,6 +1,6 @@
 CREATE TABLE brewery_info (
     brewery_id INT UNIQUE PRIMARY KEY,
-    name VARCHAR(50),
+    name VARCHAR(100),
     street VARCHAR(50),
     brewery_type VARCHAR(15),
     city VARCHAR(50),
@@ -18,7 +18,7 @@ CREATE TABLE beer_brewery_id (
 
 CREATE TABLE beer_info (
     beer_id INT,
-    name VARCHAR(50),
+    beer_name VARCHAR(100),
     style VARCHAR(50),
     abv DECIMAL(2,2),
     rating DECIMAL(2,2),
@@ -28,6 +28,7 @@ CREATE TABLE beer_info (
 
 CREATE TABLE flavor_info (
     beer_id INT,
+    beer_name VARCHAR(100),
     astringency INT,
     body INT,
     alcohol INT,
