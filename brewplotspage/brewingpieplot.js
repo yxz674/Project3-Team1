@@ -68,7 +68,8 @@ function init() {
 
   var layout = {
     height: 500,
-    width: 500
+    width: 500,
+    paper_bgcolor:"rgba(0,0,0,0)"
   };
 
   Plotly.newPlot("pie", data, layout);
