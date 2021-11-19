@@ -157,6 +157,17 @@
     <div id="plot"></div>
     <div id="pie"></div>
     
+    <!-- top ten filterable chart -->
+    <div class="dropdown text-center" >
+      <h3 class="text-center"> Select an attribute to find the top 10 beers</h3>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+        Top Ten
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <option class="dropdown-item" href="#">abv</option>
+        <a class="dropdown-item" href="#">avg rating</a>
+        <a class="dropdown-item" href="#">Top Ten</a>
+      </div>
     <!-- bar chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
@@ -166,5 +177,6 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="brewplotspage\brewingdta.js"></script>
     <script src="brewplotspage\brewingpieplot.js"></script>
+    <script src="brewplotspage\top_beers.js"></script>
   </body>
 </html>
