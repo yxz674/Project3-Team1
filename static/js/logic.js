@@ -1,18 +1,50 @@
-// Create a map object.
-var myMap = L.map("map", {
-    center: [37.09, -95.71],
-    zoom: 5
-  });
+
   
 // Add a tile layer.
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(myMap);
+});
 
-  // add a minimal zoom to prevent users from zooming out too far
-  // map._layersMinZoom=5;
+// Initialize all the LayerGroups that we'll use.
+var layers = {
+  all: new L.LayerGroup(),
+  bar: new L.LayerGroup(),
+  brewpub: new L.LayerGroup(),
+  closed: new L.LayerGroup(),
+  contract: new L.LayerGroup(),
+  large: new L.LayerGroup(),
+  micro: new L.LayerGroup(),
+  nano: new L.LayerGroup(),
+  planning: new L.LayerGroup(),
+  proprietor: new L.LayerGroup(),
+  regional: new L.LayerGroup(),
+};
 
-  
+console.log(layers);
+
+// Create a map object.
+var myMap = L.map("map", {
+  center: [37.09, -95.71],
+  zoom: 5,
+  layers: [
+    layers.all,
+    layers.bar,
+    layers.brewpub,
+    layers.closed,
+    layers.contract,
+    layers.large,
+    layers.micro,
+    layers.nano,
+    layers.planning,
+    layers.proprietor,
+    layers.regional
+  ]
+});
+
+// add our streetmap to the map
+streetmap.addTo(myMap);
+
+
 
 // get the data with d3
 d3.json("data/usbreweries.geojson").then(function(data) {
@@ -44,103 +76,155 @@ d3.json("data/usbreweries.geojson").then(function(data) {
 // creating multiple l.geoJSON layers for each brewery_state
 // read in the data using d3
 d3.json("data/usbreweries.geojson").then(function(data) {
+    console.log(data);
   
 
-  // create a variable to hold just the bar brewery_type
-  var bar = L.geoJSON(data, {
+  // create a variable to hold all breewery_type
+  all = data.features;
+  
+    // create a variable to hold just the bar brewery_type
+  bar = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "bar";
     }
   });
+  console.log(bar);
 
   
-  var brewpub = L.geoJSON(data, {
+  brewpub = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "brewpub";
     }
   });
+  console.log(brewpub);
 
-  var closed = L.geoJSON(data, {
+  closed = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "closed";
     }
   });
 
-  var contract = L.geoJSON(data, {
+  contract = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "contract";
     }
   });
 
-  var large = L.geoJSON(data, {
+  large = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "large";
     }
   });
 
-  var micro = L.geoJSON(data, {
+  micro = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "micro";
     }
   });
 
-  var nano = L.geoJSON(data, {
+  nano = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "nano";
     }
   });
 
-  var planning = L.geoJSON(data, {
+  planning = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "planning";
     }
   });
 
-  var proprietor = L.geoJSON(data, {
+  proprietor = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "proprietor";
     }
   });
 
-  var regional = L.geoJSON(data, {
+  regional = L.geoJSON(data, {
     filter: function(feature, layer) {
       return feature.properties.brewery_type == "regional";
     }
   });
+
 });
 
+// // Create an overlays object to add to the layer control.
+var overlays = {
+  "All": layers.all,
+  "Bar": layers.bar,
+  "Brewpub": layers.brewpub,
+  "Closed": layers.closed,
+  "Contract": layers.contract,
+  "Large": layers.large,
+  "Micro": layers.micro,
+  "Nano": layers.nano,
+  "Planning": layers.planning,
+  "Proprietor": layers.proprietor,
+  "Regional": layers.regional,
+};
+
+// Create a control for our layers, add our overlay layers to it.
+L.control.layers(null, overlays, {
+  collapsed: false
+ }).addTo(myMap);
+
 // add the overLay layers to the map
+// var overlays = {
+// layerControl.addOverLay(all, "All"),
+// layerControl.addOverlay(bar, "Bar"),
+// layerControl.addOverlay(brewpub, "Brewpub"),
+// layerControl.addOverlay(closed, "Closed"),
+// layerControl.addOverlay(contract, "Contract"),
+// layerControl.addOverlay(large, "Large"),
+// layerControl.addOverlay(micro, "Micro"),
+// layerControl.addOverlay(nano, "Nano"),
+// layerControl.addOverlay(planning, "Planning"),
+// layerControl.addOverlay(proprietor, "Proprietor"),
+// layerControl.addOverlay(regional, "Regional")
+// };
 
-// layerControl.addOverlay(bar, "Bar");
-// layerControl.addOverlay(brewpub, "Brewpub");
-// layerControl.addOverlay(closed, "Closed");
-// layerControl.addOverlay(contract, "Contract");
-// layerControl.addOverlay(large, "Large");
-// layerControl.addOverlay(micro, "Micro");
-// layerControl.addOverlay(nano, "Nano");
-// layerControl.addOverlay(planning, "Planning");
-// layerControl.addOverlay(proprietor, "Proprietor");
-// layerControl.addOverlay(regional, "Regional");
+// // Initialize all the LayerGroups that we'll use.
+// var layers = {
+//   Bar: new L.LayerGroup(),
+//   Brewpub: new L.LayerGroup(),
+//   Closed: new L.LayerGroup(),
+//   Contract: new L.LayerGroup(),
+//   Large: new L.LayerGroup(),
+//   Micro: new L.LayerGroup(),
+//   Nano: new L.LayerGroup(),
+//   Planning: new L.LayerGroup(),
+//   Proprietor: new L.LayerGroup(),
+// };
 
 
 
 
 
-  var bar = new L.LayerGroup();
-  var brewpub = new L.LayerGroup();
-  var closed = new L.LayerGroup();
-  var contract = new L.LayerGroup();
-  var large = new L.LayerGroup();
-  var micro = new L.LayerGroup();
-  var nano = new L.LayerGroup();
-  var planning = new L.LayerGroup();
-  var proprietor = new L.LayerGroup();
-  var regional = new L.LayerGroup();
+
+
+
+
+
+
+
+
+// var overlayMaps = {
+//   bar = new L.LayerGroup(),
+//   brewpub = new L.LayerGroup(),
+//   closed = new L.LayerGroup(),
+//   contract = new L.LayerGroup(),
+//   large = new L.LayerGroup(),
+//   micro = new L.LayerGroup(),
+//   nano = new L.LayerGroup(),
+//   planning = new L.LayerGroup(),
+//   proprietor = new L.LayerGroup(),
+//   regional = new L.LayerGroup()
+// };
 
 
 // add the layer control to the map
-L.control.layers(bar, brewpub, closed, contract, 
-  large, micro, nano, planning, proprietor, regional, null, {collapsed: false}).addTo(myMap);
+// L.control.layers(bar, brewpub, closed, contract, 
+//   large, micro, nano, planning, proprietor, regional, null, {collapsed: false}).addTo(myMap);
 
 
 
@@ -149,9 +233,9 @@ L.control.layers(bar, brewpub, closed, contract,
   // L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 
   // Add the layer control to the map
-L.control.layers(baseMaps, overlayMaps, {
-  collapsed: false
-}).addTo(myMap);
+// L.control.layers(baseMaps, overlayMaps, {
+//   collapsed: false
+// }).addTo(myMap);
 
 
 
