@@ -6,6 +6,10 @@ __pycache__/
 # api keys
 config.py
 
+logic1.js
+
+
+
 # C extensions
 *.so
 
