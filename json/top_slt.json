@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Gozu",
+        "Saltiness": "66",
+        "Brewery": "Westbrook Brewing Co.",
+        "Beer Type": "Sour - Gose"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Hitachino Nest Anbai Ale",
+        "Saltiness": "64",
+        "Brewery": "Kiuchi Brewery",
+        "Beer Type": "Sour - Gose"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Old Pro",
+        "Saltiness": "60",
+        "Brewery": "Union Craft Brewing Company",
+        "Beer Type": "Sour - Gose"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "26.2 BrewBoston Beer Company (Samuel Adams)",
+        "Saltiness": "51",
+        "Brewery": "Boston Beer Company (Samuel Adams)",
+        "Beer Type": "Sour - Gose"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Gose",
+        "Saltiness": "48",
+        "Brewery": "Upright Brewing Company",
+        "Beer Type": "Sour - Gose"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Salty Scot",
+        "Saltiness": "47",
+        "Brewery": "Parallel 49 Brewing Company",
+        "Beer Type": "Scotch Ale / Wee Heavy"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Suburban Beverage",
+        "Saltiness": "46",
+        "Brewery": "Perennial Artisan Ales",
+        "Beer Type": "Sour - Gose"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Original ",
+        "Saltiness": "44",
+        "Brewery": "Ritterguts Gose",
+        "Beer Type": "Sour - Gose"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Harborside",
+        "Saltiness": "43",
+        "Brewery": "Night Shift Brewing",
+        "Beer Type": "Sour - Gose"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Golden Gate Gose",
+        "Saltiness": "41",
+        "Brewery": "Almanac Beer Co.",
+        "Beer Type": "Sour - Gose"
+    }
+}

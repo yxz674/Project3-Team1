@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Billy's Chilies Beer (Timberline Series)",
+        "Spices": "184",
+        "Brewery": "Twisted Pine Brewing Company",
+        "Beer Type": "Chile Beer"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Chipotle Smoked Porter",
+        "Spices": "179",
+        "Brewery": "Pipeworks Brewing Company",
+        "Beer Type": "Chile Beer"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Underlig Jul",
+        "Spices": "178",
+        "Brewery": "N\u00f8gne \u00d8 - Det Kompromissl\u00f8se Bryggeri A/S",
+        "Beer Type": "Herb and Spice Beer"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "Benji's Chipotle Smoked Imperial Porter",
+        "Spices": "173",
+        "Brewery": "Tyranena Brewing Company",
+        "Beer Type": "Porter - Smoked"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Chipotle Ale",
+        "Spices": "170",
+        "Brewery": "Rogue Ales",
+        "Beer Type": "Chile Beer"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Chili Pepper Ale",
+        "Spices": "169",
+        "Brewery": "Six Rivers Brewery",
+        "Beer Type": "Chile Beer"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Indra Kunindra",
+        "Spices": "169",
+        "Brewery": "Ballast Point Brewing Company",
+        "Beer Type": "Stout - Foreign / Export"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Barrel-Aged Framinghammer - Mole",
+        "Spices": "165",
+        "Brewery": "Jack's Abby Brewing",
+        "Beer Type": "Porter - Baltic"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Mexican Cake",
+        "Spices": "161",
+        "Brewery": "Westbrook Brewing Co.",
+        "Beer Type": "Stout - American Imperial"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Autumnal Mol\u00e9 Stout",
+        "Spices": "160",
+        "Brewery": "Ska Brewing Co.",
+        "Beer Type": "Chile Beer"
+    }
+}

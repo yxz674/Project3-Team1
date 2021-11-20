@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\gallery.css">
+    <title>BHC Beer&Brewing Info</title>
+    
+    
+
+    <!-- Marker cluster JavaScript code -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+    <!-- Marker cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <!-- d3 reference -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="logo" alt=" beer logo image" src="img\logo.png"/>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="beerdata.html">Brewery List</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="mapping.html">Mapping</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="brewingplots.html">Data Dashboard</a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-cta" href="index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Container for the image gallery -->
+  <div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 29</div>
+        <img src="img\And The Devil Makes Three Triple IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 29</div>
+        <img src="img\Autumn Zephyr American IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">3 / 29</div>
+        <img src="img\Bigfoot Barleywine.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 29</div>
+        <img src="img\Black is Beautiful Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">5 / 29</div>
+        <img src="img\Bourbon County Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">6 / 29</div>
+        <img src="img\Campfire Candle Imperial Milk Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">7 / 29</div>
+        <img src="img\Choculence Chocolate Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">8 / 29</div>
+        <img src="img\Danke Chain Oktoberfest.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">9 / 29</div>
+        <img src="img\Decorating Pieces of Time BBA Barleywine.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">10 / 29</div>
+        <img src="img\Dense Brume American IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">11 / 29</div>
+        <img src="img\Double Oaked Mastodon Belgian Dark Ale.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">12 / 29</div>
+        <img src="img\Elder Beast  BBA Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">13 / 29</div>
+        <img src="img\Elder Beast  x Century BBA Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">14 / 29</div>
+        <img src="img\Feral Dawn BBA Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">15 / 29</div>
+        <img src="img\Frost Proof Belgian White.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">16 / 29</div>
+        <img src="img\Galactic Heroes IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">17 / 29</div>
+        <img src="img\Hazing Face Pale Ale.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">18 / 29</div>
+        <img src="img\Hydrophilic Double IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">19 / 29</div>
+        <img src="img\Jai Alai IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">20 / 29</div>
+        <img src="img\More Than Just A Number IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">21 / 29</div>
+        <img src="img\Mushhushshu Dark Ale.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">22 / 29</div>
+        <img src="img\Notice Me,Senpai! New England IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">23 / 29</div>
+        <img src="img\Photon Pale Ale.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">24 / 29</div>
+        <img src="img\Skin Walker BBA Pepper Stout.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">25 / 29</div>
+        <img src="img\Sticky Husks IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">26 / 29</div>
+        <img src="img\Tenpenny Amber Ale.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">27 / 29</div>
+        <img src="img\Vertical Epic 08 Imperial IPA.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">28 / 29</div>
+        <img src="img\Wood Ya Honey Wheat Wine.png" style="width:100%">
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">29 / 29</div>
+        <img src="img\Yesterday's Eyes IPA.png" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="img\And The Devil Makes Three Triple IPA.png" style="width:100%" onclick="currentSlide(1)" alt="And The Devil Makes Three Triple IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Autumn Zephyr American IPA.png" style="width:100%" onclick="currentSlide(2)" alt="Autumn Zephyr American IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Bigfoot Barleywine.png" style="width:100%" onclick="currentSlide(3)" alt="Bigfoot Barleywine">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Black is Beautiful Stout.png" style="width:100%" onclick="currentSlide(4)" alt="Black is Beautiful Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Bourbon County Stout.png" style="width:100%" onclick="currentSlide(5)" alt="Bourbon County Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Campfire Candle Imperial Milk Stout.png" style="width:100%" onclick="currentSlide(6)" alt="Campfire Candle Imperial Milk Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Choculence Chocolate Stout.png" style="width:100%" onclick="currentSlide(7)" alt="Choculence Chocolate Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Danke Chain Oktoberfest.png" style="width:100%" onclick="currentSlide(8)" alt="Danke Chain Oktoberfest">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Decorating Pieces of Time BBA Barleywine.png" style="width:100%" onclick="currentSlide(9)" alt="Decorating Pieces of Time BBA Barleywine">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Dense Brume American IPA.png" style="width:100%" onclick="currentSlide(10)" alt="Dense Brume American IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Double Oaked Mastodon Belgian Dark Ale.png" style="width:100%" onclick="currentSlide(11)" alt="Double Oaked Mastodon Belgian Dark Ale">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Elder Beast  BBA Stout.png" style="width:100%" onclick="currentSlide(12)" alt="Elder Beast  BBA Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Elder Beast  x Century BBA Stout.png" style="width:100%" onclick="currentSlide(13)" alt="Elder Beast  x Century BBA Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Feral Dawn BBA Stout.png" style="width:100%" onclick="currentSlide(14)" alt="Feral Dawn BBA Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Frost Proof Belgian White.png" style="width:100%" onclick="currentSlide(15)" alt="Frost Proof Belgian White">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Galactic Heroes IPA.png" style="width:100%" onclick="currentSlide(16)" alt="Galactic Heroes IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Hazing Face Pale Ale.png" style="width:100%" onclick="currentSlide(17)" alt="Hazing Face Pale Ale">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Hydrophilic Double IPA.png" style="width:100%" onclick="currentSlide(18)" alt="Hydrophilic Double IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Jai Alai IPA.png" style="width:100%" onclick="currentSlide(19)" alt="Jai Alai IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\More Than Just A Number IPA.png" style="width:100%" onclick="currentSlide(20)" alt="More Than Just A Number IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Mushhushshu Dark Ale.png" style="width:100%" onclick="currentSlide(21)" alt="Mushhushshu Dark Ale">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Notice Me,Senpai! New England IPA.png" style="width:100%" onclick="currentSlide(22)" alt="Notice Me,Senpai! New England IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Photon Pale Ale.png" style="width:100%" onclick="currentSlide(23)" alt="Photon Pale Ale">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Skin Walker BBA Pepper Stout.png" style="width:100%" onclick="currentSlide(24)" alt="Skin Walker BBA Pepper Stout">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Sticky Husks IPA.png" style="width:100%" onclick="currentSlide(25)" alt="Sticky Husks IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Tenpenny Amber Ale.png" style="width:100%" onclick="currentSlide(26)" alt="Tenpenny Amber Ale">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Vertical Epic 08 Imperial IPA.png" style="width:100%" onclick="currentSlide(27)" alt="Vertical Epic 08 Imperial IPA">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Wood Ya Honey Wheat Wine.png" style="width:100%" onclick="currentSlide(28)" alt="Wood Ya Honey Wheat Wine">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img\Yesterday's Eyes IPA.png" style="width:100%" onclick="currentSlide(29)" alt="Yesterday's Eyes IPA">
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  
+
+  <script src="beergallarypage\gallery.js"></script>
+
+  </body>
+    
+</html>

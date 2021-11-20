@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "MMMKAY",
+        "Hoppiness": "193",
+        "Brewery": "Short's Brewing Company",
+        "Beer Type": "Lager - India Pale Lager (IPL)"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Trinity IPA",
+        "Hoppiness": "172",
+        "Brewery": "Trinity Brewhouse",
+        "Beer Type": "IPA - English"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Pursuit Of Hoppiness",
+        "Hoppiness": "172",
+        "Brewery": "Grand Teton Brewing Co.",
+        "Beer Type": "Red Ale - Imperial"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "The Oracle",
+        "Hoppiness": "171",
+        "Brewery": "Bell's Brewery - Eccentric Caf\u00e9 & General Store",
+        "Beer Type": "IPA - Imperial"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "St-Ambroise India Pale Ale",
+        "Hoppiness": "171",
+        "Brewery": "McAuslan Brewing",
+        "Beer Type": "IPA - English"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Moondog Ale",
+        "Hoppiness": "171",
+        "Brewery": "Great Lakes Brewing Co.",
+        "Beer Type": "Bitter - English Extra Special / Strong Bitter (ESB)"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Triple Hop'd Lager",
+        "Hoppiness": "158",
+        "Brewery": "Bitburger Brauerei",
+        "Beer Type": "Lager - India Pale Lager (IPL)"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "IPL",
+        "Hoppiness": "154",
+        "Brewery": "Straub Brewery",
+        "Beer Type": "Lager - India Pale Lager (IPL)"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Heller Bock Saphir",
+        "Hoppiness": "152",
+        "Brewery": "Brauerei Hofstetten Krammer GmbH & Co. KG",
+        "Beer Type": "Bock - Maibock"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Uncle Rusty",
+        "Hoppiness": "151",
+        "Brewery": "Columbus Brewing Company",
+        "Beer Type": "Red Ale - Imperial"
+    }
+}

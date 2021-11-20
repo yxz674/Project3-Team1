@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Victory At Sea - Peanut Butter",
+        "Maltiness": "304",
+        "Brewery": "Ballast Point Brewing Company",
+        "Beer Type": "Porter - Imperial"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Sweet Baby Jesus!",
+        "Maltiness": "265",
+        "Brewery": "DuClaw Brewing Company",
+        "Beer Type": "Porter - American"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Raincloud - Peanut Butter",
+        "Maltiness": "259",
+        "Brewery": "Foolproof Brewing Company",
+        "Beer Type": "Porter - Robust"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "Down 'N Dirty Chocolate Oatmeal Stout",
+        "Maltiness": "239",
+        "Brewery": "Tyranena Brewing Company",
+        "Beer Type": "Stout - Oatmeal"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Bourbon Barrel Aged Dark Star: Coffee Edition",
+        "Maltiness": "233",
+        "Brewery": "Fremont Brewing Company",
+        "Beer Type": "Stout - Oatmeal"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Bourbon Barrel Black Maple",
+        "Maltiness": "233",
+        "Brewery": "Jackie O's Pub & Brewery",
+        "Beer Type": "Porter - Imperial"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Moment Of Clarity",
+        "Maltiness": "231",
+        "Brewery": "Tree House Brewing Company",
+        "Beer Type": "Stout - Sweet / Milk"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Day & Night",
+        "Maltiness": "230",
+        "Brewery": "Trillium Brewing Company",
+        "Beer Type": "Barleywine - American"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Sumatra Mountain Brown",
+        "Maltiness": "218",
+        "Brewery": "Founders Brewing Company",
+        "Beer Type": "Brown Ale - American"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Scurry",
+        "Maltiness": "218",
+        "Brewery": "Off Color Brewing",
+        "Beer Type": "Altbier"
+    }
+}

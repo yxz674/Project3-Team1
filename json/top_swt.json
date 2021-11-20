@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Braggot",
+        "Sweetness": "263",
+        "Brewery": "Kuhnhenn Brewing Company",
+        "Beer Type": "Braggot"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Double Or Nothing",
+        "Sweetness": "238",
+        "Brewery": "Otter Creek Brewing",
+        "Beer Type": "Barleywine - American"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Box Of Chocolate",
+        "Sweetness": "219",
+        "Brewery": "Charleville Vineyard Microbrewery",
+        "Beer Type": "Quadrupel (Quad)"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "\u00c9quinoxe Du Printemps",
+        "Sweetness": "217",
+        "Brewery": "Brasserie Dieu du Ciel!",
+        "Beer Type": "Scotch Ale / Wee Heavy"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Dark Heathen Triple Bock",
+        "Sweetness": "216",
+        "Brewery": "Kuhnhenn Brewing Company",
+        "Beer Type": "Bock - Doppelbock"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Brother Adam's Bragget Ale",
+        "Sweetness": "209",
+        "Brewery": "Atlantic Brewing Company / Mainely Meat BBQ",
+        "Beer Type": "Braggot"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Moment Of Clarity",
+        "Sweetness": "208",
+        "Brewery": "Tree House Brewing Company",
+        "Beer Type": "Stout - Sweet / Milk"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Barmy",
+        "Sweetness": "206",
+        "Brewery": "Ballast Point Brewing Company",
+        "Beer Type": "Strong Ale - American"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Hive 56",
+        "Sweetness": "205",
+        "Brewery": "Allagash Brewing Company",
+        "Beer Type": "Brown Ale - Belgian Dark"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Serendipity",
+        "Sweetness": "204",
+        "Brewery": "New Glarus Brewing Company",
+        "Beer Type": "Fruit and Field Beer"
+    }
+}

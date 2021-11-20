@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Sour In The Rye - Kumquats",
+        "Sourness": "323",
+        "Brewery": "Bruery Terreux",
+        "Beer Type": "Wild Ale"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Sour Reserve",
+        "Sourness": "284",
+        "Brewery": "Upland Brewing Company",
+        "Beer Type": "Lambic - Gueuze"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Gozu",
+        "Sourness": "270",
+        "Brewery": "Westbrook Brewing Co.",
+        "Beer Type": "Sour - Gose"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "Experimental Raspberry",
+        "Sourness": "241",
+        "Brewery": "Hanssens Artisanaal bvba",
+        "Beer Type": "Lambic - Fruit"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Incorrigible",
+        "Sourness": "241",
+        "Brewery": "New Holland Brewing Company",
+        "Beer Type": "Sour - Berliner Weisse"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "La Roja - Grand Reserve",
+        "Sourness": "238",
+        "Brewery": "Jolly Pumpkin Artisan Ales",
+        "Beer Type": "Sour - Flanders Red Ale"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Lambic",
+        "Sourness": "233",
+        "Brewery": "Rivertown Brewery & Barrel House",
+        "Beer Type": "Lambic - Traditional"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Persimmon Lambic",
+        "Sourness": "233",
+        "Brewery": "Upland Brewing Company",
+        "Beer Type": "Lambic - Fruit"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Old Growth",
+        "Sourness": "230",
+        "Brewery": "Trinity Brewing Company",
+        "Beer Type": "Sour - Flanders Oud Bruin"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Oude Geuze De Cam",
+        "Sourness": "229",
+        "Brewery": "De Cam Geuzestekerij",
+        "Beer Type": "Lambic - Gueuze"
+    }
+}

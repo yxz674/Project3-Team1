@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Montmorency Vs Balaton",
+        "Astringency": "83",
+        "Brewery": "Jester King Brewery",
+        "Beer Type": "Wild Ale"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Sour Reserve",
+        "Astringency": "81",
+        "Brewery": "Upland Brewing Company",
+        "Beer Type": "Lambic - Gueuze"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Hometown Blonde",
+        "Astringency": "77",
+        "Brewery": "New Glarus Brewing Company",
+        "Beer Type": "Pilsner - German"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "Experimental Raspberry",
+        "Astringency": "76",
+        "Brewery": "Hanssens Artisanaal bvba",
+        "Beer Type": "Lambic - Fruit"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Sour In The Rye - Kumquats",
+        "Astringency": "70",
+        "Brewery": "Bruery Terreux",
+        "Beer Type": "Wild Ale"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Iris",
+        "Astringency": "69",
+        "Brewery": "Brasserie Cantillon",
+        "Beer Type": "Lambic - Traditional"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Brut IPA",
+        "Astringency": "68",
+        "Brewery": "Anderson Valley Brewing Company",
+        "Beer Type": "IPA - Brut"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "The Wright Pils",
+        "Astringency": "66",
+        "Brewery": "Great Lakes Brewing Co.",
+        "Beer Type": "Pilsner - Bohemian / Czech"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Red Poppy",
+        "Astringency": "66",
+        "Brewery": "The Lost Abbey",
+        "Beer Type": "Sour - Flanders Red Ale"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Fresh Cut",
+        "Astringency": "65",
+        "Brewery": "Peak Organic Brewing Company",
+        "Beer Type": "Pilsner - Bohemian / Czech"
+    }
+}

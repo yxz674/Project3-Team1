@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": " Schorschbock 57%",
+        "ABV": "57.5",
+        "Brewery": "Schorschbr\u00e4u",
+        "Beer Type": "Bock - Eisbock"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": " Schorschbock 31%",
+        "ABV": "30.86",
+        "Brewery": "Schorschbr\u00e4u",
+        "Beer Type": "Bock - Eisbock"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Samuel Adams UtopiasBoston Beer Company (Samuel Adams)",
+        "ABV": "28.0",
+        "Brewery": "Boston Beer Company (Samuel Adams)",
+        "Beer Type": "Strong Ale - American"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "My Name Is Legion",
+        "ABV": "22.0",
+        "Brewery": "Lehe Pruulikoda",
+        "Beer Type": "Bock - Eisbock"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Colossus",
+        "ABV": "20.0",
+        "Brewery": "DuClaw Brewing Company",
+        "Beer Type": "Strong Ale - American"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Chocolate Rain",
+        "ABV": "19.6",
+        "Brewery": "The Bruery",
+        "Beer Type": "Stout - American Imperial"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Black Tuesday",
+        "ABV": "19.5",
+        "Brewery": "The Bruery",
+        "Beer Type": "Stout - American Imperial"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Barrel Roll No. 3 Pugachev's Cobra",
+        "ABV": "18.9",
+        "Brewery": "Hangar 24 Brewing",
+        "Beer Type": "Stout - Russian Imperial"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Double Ice Bock",
+        "ABV": "18.0",
+        "Brewery": "Southampton Publick House",
+        "Beer Type": "Bock - Eisbock"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "World Wide Stout",
+        "ABV": "18.0",
+        "Brewery": "Dogfish Head Craft Brewery",
+        "Beer Type": "Stout - American Imperial"
+    }
+}

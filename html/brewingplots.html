@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- pie chart js -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+    <title>BHC Beer&Brewing Info</title>
+    
+    
+
+    <!-- Marker cluster JavaScript code -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+    <!-- Marker cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <!-- d3 reference -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="logo" alt=" beer logo image" src="img\logo.png"/>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="beerdata.html">Brewery List</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="mapping.html">Mapping</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="brewingplots.html">Data Dashboard</a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-cta" href="index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-12 jumbotron text-center">
+            <h2>Brewing and Beer Data Analysis</h2>
+            <p>Use the interactive charts below to explore the dataset</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center"">
+            <h5>Comparing Brewing Type for Alll 50 States</h5>
+            <div id="myDIV">
+              <link rel="stylesheet" href="css\brewingbarplot.css">
+              <button class="btn active" onclick="changeData(0)">micro</button>
+              <button class="btn" onclick="changeData(1)">brewpub</button>
+              <button class="btn" onclick="changeData(2)">planning</button>
+              <button class="btn" onclick="changeData(3)">contract</button>
+              <button class="btn" onclick="changeData(4)">regional</button>
+              <button class="btn" onclick="changeData(5)">proprietor</button>
+              <button class="btn" onclick="changeData(6)">large</button>
+              <button class="btn" onclick="changeData(7)">closed</button>
+              <button class="btn" onclick="changeData(8)">nano</button>
+              <button class="btn" onclick="changeData(9)">bar</button>
+            </div>
+            <canvas id="chart-0"></canvas>
+            <hr>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5 text-center">
+            <h4>Display Brewing Type for Each State</h4>
+            <select id="selDataset">
+                <option value="alabama">Alabama</option>
+                <option value="alaska">Alaska</option>
+                <option value="arizona">Arizona</option>
+                <option value="arkansas">Arkansas</option>
+                <option value="california">California</option>
+                <option value="colorado">Colorado</option>
+                <option value="connecticut">Connecticut</option>
+                <option value="delaware">Delaware</option>
+                <option value="district_of_columbia">District of Columbia</option>
+                <option value="florida">Florida</option>
+                <option value="georgia">Georgia</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="idaho">Idaho</option>
+                <option value="illinois">Illinois</option>
+                <option value="indiana">Indiana</option>
+                <option value="iowa">Iowa</option>
+                <option value="kansas">Kansas</option>
+                <option value="kentucky">Kentucky</option>
+                <option value="louisiana">Louisiana</option>
+                <option value="maine">Maine</option>
+                <option value="maryland">Maryland</option>
+                <option value="massachusetts">Massachusetts</option>
+                <option value="michigan">Michigan</option>
+                <option value="minnesota">Minnesota</option>
+                <option value="mississippi">Mississippi</option>
+                <option value="missouri">Missouri</option>
+                <option value="montana">Montana</option>
+                <option value="nebraska">Nebraska</option>
+                <option value="nevada">Nevada</option>
+                <option value="new_hampshire">New Hampshire</option>
+                <option value="new_jersey">New Jersey</option>
+                <option value="new_mexico">New Mexico</option>
+                <option value="new_york">New York</option>
+                <option value="north_carolina">North Carolina</option>
+                <option value="north_dakota">North Dakota</option>
+                <option value="ohio">Ohio</option>
+                <option value="oklahoma">Oklahoma</option>
+                <option value="oregon">Oregon</option>
+                <option value="pennsylvania">Pennsylvania</option>
+                <option value="rhode_island">Rhode Island</option>
+                <option value="south_carolina">South Carolina</option>
+                <option value="south_dakota">South Dakota</option>
+                <option value="tennessee">Tennessee</option>
+                <option value="texas">Texas</option>
+                <option value="utah">Utah</option>
+                <option value="vermont">Vermont</option>
+                <option value="virginia">Virginia</option>
+                <option value="washington">Washington</option>
+                <option value="west_virginia">West Virginia</option>
+                <option value="wisconsin">Wisconsin</option>
+                <option value="wyoming">Wyoming</option>
+            </select>
+          </div>
+          <div class="col-md-5 text-center">
+            <h4>Comparing XXXXXXXXXX</h4>
+            <div id=""></div>
+          </div>
+        </div>
+    </div>
+
+    <div id="plot"></div>
+    <div id="pie"></div>
+    
+    <!-- top ten filterable chart -->
+    <div class="dropdown text-center" >
+      <h3 class="text-center"> Select an attribute to find the top 10 beers</h3>
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+        Top Ten
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        
+      </div>
+      <table border="1" style="margin:5%;"class="dataframe">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+            <th>Beer Name</th>
+            <th>Beer Type</th>
+            <th>Brewery</th>
+            <th>Description</th>
+            <th>ABV</th>
+            <th>Ave Rating</th>
+            <th>Astringency</th>
+            <th>Body</th>
+            <th>Alcohol</th>
+            <th>Bitter</th>
+            <th>Sweet</th>
+            <th>Sour</th>
+            <th>Salty</th>
+            <th>Fruits</th>
+            <th>Hoppy</th>
+            <th>Spices</th>
+            <th>Malty</th>
+            <th>Avg IBU</th>
+          </tr>
+          <tr>
+            <th>Placement</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-center">1</th>
+            <td>Schorschbock 57%</td>
+            <td>Bock - Eisbock</td>
+            <td>Schorschbräu</td>
+            <td>Notes:</td>
+            <td>57.50</td>
+            <td>2.97</td>
+            <td>0</td>
+            <td>7</td>
+            <td>17</td>
+            <td>3</td>
+            <td>9</td>
+            <td>6</td>
+            <td>0</td>
+            <td>10</td>
+            <td>0</td>
+            <td>2</td>
+            <td>4</td>
+            <td>30.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">2</th>
+            <td>Schorschbock 31%</td>
+            <td>Bock - Eisbock</td>
+            <td>Schorschbräu</td>
+            <td>Notes:</td>
+            <td>30.86</td>
+            <td>3.34</td>
+            <td>4</td>
+            <td>5</td>
+            <td>14</td>
+            <td>2</td>
+            <td>16</td>
+            <td>6</td>
+            <td>0</td>
+            <td>10</td>
+            <td>2</td>
+            <td>4</td>
+            <td>10</td>
+            <td>30.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">3</th>
+            <td>Samuel Adams UtopiasBoston Beer Company (Samuel Adams)</td>
+            <td>Strong Ale - American</td>
+            <td>Boston Beer Company (Samuel Adams)</td>
+            <td><div class="overflow">Notes:Truly the epitome of brewing's two thousand year evolution, Samuel Adams Utopias® offers a flavor not just unlike any other beer but unlike any other beverage in the world. Each release is a blend of batches, some having been aged up to 16 years in the barrel room of our Boston Brewery, in a variety of woods. We aged a portion of the beer in hand-selected, single-use bourbon casks from the award-winning Buffalo Trace Distillery. Some of the latest batches also spent time in Portuguese muscatel finishing casks, as well as sherry, brandy and Cognac casks. This flavorful, slightly fruity brew has a sweet, malty flavor that is reminiscent of a deep, rich vintage port, fine cognac or aged sherry.2019 Vintage aged in Buffalo Trace barrels and finished in Aquavit, Caracavelos, Ruby Port, Cognac, and Medeira Barrels.</div></td>
+            <td>28.00</td>
+            <td>4.54</td>
+            <td>8</td>
+            <td>44</td>
+            <td>64</td>
+            <td>30</td>
+            <td>108</td>
+            <td>18</td>
+            <td>0</td>
+            <td>76</td>
+            <td>13</td>
+            <td>42</td>
+            <td>107</td>
+            <td>70.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">4</th>
+            <td>My Name Is Legion</td>
+            <td>Bock - Eisbock</td>
+            <td>Lehe Pruulikoda</td>
+            <td>Notes:</td>
+            <td>22.00</td>
+            <td>3.56</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>30.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">5</th>
+            <td>Colossus</td>
+            <td>Strong Ale - American</td>
+            <td>DuClaw Brewing Company</td>
+            <td><div class="overflow">Notes:Brewed to push the limits of our own skills and imagination, Colossus is dark amber in color and full-bodied with a perceptively sweet flavor profile accented by notes of apple, and a surprisingly tame alcohol presence. This astounding alcohol content is achieved through fermentation alone; no alcohol is introduced at packaging nor it distilled. Multiple grains are used in conjunction with three different yeast strains to produce a beer that simply defies classification… and most laws of nature. One sip of this behemoth brew and you’ll agree: Sometimes size does matter!2006 Batch - 20.0% ABV2011 Batch - 21.92% ABV2014 Batch - 17.3% ABV2015 Batch - 21.0% ABV2018 Batch - 20.0% ABV</div></td>
+            <td>20.00</td>
+            <td>3.75</td>
+            <td>11</td>
+            <td>59</td>
+            <td>106</td>
+            <td>23</td>
+            <td>151</td>
+            <td>61</td>
+            <td>1</td>
+            <td>90</td>
+            <td>16</td>
+            <td>56</td>
+            <td>69</td>
+            <td>70.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">6</th>
+            <td>Chocolate Rain</td>
+            <td>Stout - American Imperial</td>
+            <td>The Bruery</td>
+            <td><div class="overflow">Notes:Black Tuesday with Vanilla Bean &amp; Cocoa Nibs.2011: 18.5% ABV 2012: 19.5% ABV2013: 18.0% ABV2014: 18.5% ABV2015: 18.4% ABV2016: 19.7% ABV2017: 19.6% ABV2018: 19.5% ABV2019: 19.5% ABV</div></td>
+            <td>19.60</td>
+            <td>4.59</td>
+            <td>6</td>
+            <td>82</td>
+            <td>51</td>
+            <td>27</td>
+            <td>69</td>
+            <td>7</td>
+            <td>0</td>
+            <td>14</td>
+            <td>5</td>
+            <td>25</td>
+            <td>88</td>
+            <td>65.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">7</th>
+            <td>Black Tuesday</td>
+            <td>Stout - American Imperial</td>
+            <td>The Bruery</td>
+            <td><div class="overflow">Notes:Our infamous Black Tuesday is an imperial stout aged in bourbon barrels for over a year. Rich caramel, toasted malt, vanilla, burnt wood and anise are just a few of the many flavors in this rich, decadent imperial stout.2009: 19.5% ABV 2010: 18.2% ABV 2011: 18.3% ABV 2012: 19.2% ABV2013: 18.9% ABV2014: 19.7% ABV2015: 19.9% ABV2016: 20.3% ABV2017: 19.5% ABV2018: 19.5% ABV2019: 19.4% ABV</div></td>
+            <td>19.50</td>
+            <td>4.59</td>
+            <td>3</td>
+            <td>70</td>
+            <td>95</td>
+            <td>25</td>
+            <td>106</td>
+            <td>17</td>
+            <td>1</td>
+            <td>43</td>
+            <td>3</td>
+            <td>30</td>
+            <td>126</td>
+            <td>65.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">8</th>
+            <td>Barrel Roll No. 3 Pugachev's Cobra</td>
+            <td>Stout - Russian Imperial</td>
+            <td>Hangar 24 Brewing</td>
+            <td>Notes:</td>
+            <td>18.90</td>
+            <td>4.38</td>
+            <td>7</td>
+            <td>85</td>
+            <td>53</td>
+            <td>25</td>
+            <td>109</td>
+            <td>5</td>
+            <td>0</td>
+            <td>11</td>
+            <td>4</td>
+            <td>17</td>
+            <td>123</td>
+            <td>70.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">9</th>
+            <td>Double Ice Bock</td>
+            <td>Bock - Eisbock</td>
+            <td>Southampton Publick House</td>
+            <td><div class="overflow">Notes:Southampton Double Ice Bock is based off of a traditional German-style Bock beer. This German lager beer is rich and malty and brewed to an alcohol strength of 6-7%. “Ice Bock” is produced when a Bock beer is partially frozen in order to increase it’s alcohol content. In this process, some of the water content turns to ice, effectively strengthening the flavor and alcohol of the beer. We take this process one step further. After the initial freezing, the beer is decanted off the ice and frozen a second time. The resulting beer is a deceptively smooth and amazingly strong lager.</div></td>
+            <td>18.00</td>
+            <td>4.01</td>
+            <td>15</td>
+            <td>59</td>
+            <td>79</td>
+            <td>15</td>
+            <td>171</td>
+            <td>49</td>
+            <td>0</td>
+            <td>77</td>
+            <td>13</td>
+            <td>10</td>
+            <td>119</td>
+            <td>30.0</td>
+          </tr>
+          <tr>
+            <th class="text-center">10</th>
+            <td>World Wide Stout</td>
+            <td>Stout - American Imperial</td>
+            <td>Dogfish Head Craft Brewery</td>
+            <td><div class="overflow">Notes:Brewed with a ridiculous amount of barley, World Wide Stout is dark, rich, roasty and complex. This ageable ale clocks in at 15-20% ABV and has a depth more in line with a fine port than with a can of cheap, mass-marketed beer.70 IBU</div></td>
+            <td>18.00</td>
+            <td>4.28</td>
+            <td>7</td>
+            <td>76</td>
+            <td>71</td>
+            <td>67</td>
+            <td>102</td>
+            <td>26</td>
+            <td>0</td>
+            <td>56</td>
+            <td>22</td>
+            <td>20</td>
+            <td>129</td>
+            <td>65.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- bar chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <script src="brewplotspage\brewingbarplot.js"></script>
+    <!-- pie chart js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="brewplotspage\brewingdta.js"></script>
+    <script src="brewplotspage\brewingpieplot.js"></script>
+    <script src="brewplotspage\top_beers.js"></script>
+  </body>
+</html>

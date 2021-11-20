@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Earl Coffee Oatmeal Stout",
+        "Bitterness": "150",
+        "Brewery": "Hill Farmstead Brewery",
+        "Beer Type": "Stout - Oatmeal"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Black Racer",
+        "Bitterness": "148",
+        "Brewery": "Bear Republic Brewing Co.",
+        "Beer Type": "IPA - Black / Cascadian Dark Ale"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Java Stout",
+        "Bitterness": "146",
+        "Brewery": "Bell's Brewery - Eccentric Caf\u00e9 & General Store",
+        "Beer Type": "Stout - American"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "Heavy Seas Black Cannon",
+        "Bitterness": "145",
+        "Brewery": "Heavy Seas Beer",
+        "Beer Type": "IPA - Black / Cascadian Dark Ale"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Regular Coffee",
+        "Bitterness": "144",
+        "Brewery": "Carton Brewing Company",
+        "Beer Type": "Cream Ale"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Hop In The Dark Cascadian Dark Ale",
+        "Bitterness": "144",
+        "Brewery": "Deschutes Brewery",
+        "Beer Type": "IPA - Black / Cascadian Dark Ale"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "BREWtality - Espresso Black Bier",
+        "Bitterness": "143",
+        "Brewery": "Midnight Sun Brewing Co.",
+        "Beer Type": "Lager - Schwarzbier"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Cherry Bean Coffee Stout",
+        "Bitterness": "140",
+        "Brewery": "Brau Brothers Brewing Co. LLC",
+        "Beer Type": "Stout - Foreign / Export"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "The Devil Made Me Do It!",
+        "Bitterness": "139",
+        "Brewery": "Tyranena Brewing Company",
+        "Beer Type": "Porter - Imperial"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Coffee Bender",
+        "Bitterness": "139",
+        "Brewery": "Surly Brewing Company",
+        "Beer Type": "Brown Ale - American"
+    }
+}

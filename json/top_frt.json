@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Sour In The Rye - Kumquats",
+        "Fruitiness": "222",
+        "Brewery": "Bruery Terreux",
+        "Beer Type": "Wild Ale"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "King Julius",
+        "Fruitiness": "217",
+        "Brewery": "Tree House Brewing Company",
+        "Beer Type": "IPA - New England"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Juice Machine",
+        "Fruitiness": "211",
+        "Brewery": "Tree House Brewing Company",
+        "Beer Type": "IPA - New England"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "Very Green",
+        "Fruitiness": "209",
+        "Brewery": "Tree House Brewing Company",
+        "Beer Type": "IPA - New England"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "JJJuliusss",
+        "Fruitiness": "207",
+        "Brewery": "Tree House Brewing Company",
+        "Beer Type": "IPA - New England"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Femme Fatale Yuzu Pale",
+        "Fruitiness": "207",
+        "Brewery": "Evil Twin Brewing",
+        "Beer Type": "Brett Beer"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Montmorency Vs Balaton",
+        "Fruitiness": "204",
+        "Brewery": "Jester King Brewery",
+        "Beer Type": "Wild Ale"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Serendipity",
+        "Fruitiness": "202",
+        "Brewery": "New Glarus Brewing Company",
+        "Beer Type": "Fruit and Field Beer"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Doubleganger",
+        "Fruitiness": "201",
+        "Brewery": "Tree House Brewing Company",
+        "Beer Type": "IPA - New England"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Society & Solitude #4",
+        "Fruitiness": "200",
+        "Brewery": "Hill Farmstead Brewery",
+        "Beer Type": "IPA - New England"
+    }
+}

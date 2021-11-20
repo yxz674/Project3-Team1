@@ -1,0 +1,72 @@
+{
+    "1": {
+        "Placement": "1",
+        "Beer Name": "Pumking - Rum Barrel Aged",
+        "Alcohol": "139",
+        "Brewery": "Southern Tier Brewing Company",
+        "Beer Type": "Pumpkin Beer"
+    },
+    "2": {
+        "Placement": "2",
+        "Beer Name": "Brewer's Reserve Bourbon Barrel Quadruple Ale",
+        "Alcohol": "130",
+        "Brewery": "Central Waters Brewing Co.",
+        "Beer Type": "Quadrupel (Quad)"
+    },
+    "3": {
+        "Placement": "3",
+        "Beer Name": "Sustenance Black Beer - Bourbon Barrel-Aged",
+        "Alcohol": "126",
+        "Brewery": "Short's Brewing Company",
+        "Beer Type": "Lager - Schwarzbier"
+    },
+    "4": {
+        "Placement": "4",
+        "Beer Name": "Wee Heavy - Barrel-Aged",
+        "Alcohol": "123",
+        "Brewery": "AleSmith Brewing Company",
+        "Beer Type": "Scotch Ale / Wee Heavy"
+    },
+    "5": {
+        "Placement": "5",
+        "Beer Name": "Bourbon Barrel Ale",
+        "Alcohol": "122",
+        "Brewery": "The Schlafly Tap Room",
+        "Beer Type": "Strong Ale - English"
+    },
+    "6": {
+        "Placement": "6",
+        "Beer Name": "Golden Delicious",
+        "Alcohol": "120",
+        "Brewery": "Captain Lawrence Brewing Co.",
+        "Beer Type": "Tripel"
+    },
+    "7": {
+        "Placement": "7",
+        "Beer Name": "Bourbon DIPA",
+        "Alcohol": "120",
+        "Brewery": "Hardywood Park Craft Brewery",
+        "Beer Type": "IPA - Belgian"
+    },
+    "8": {
+        "Placement": "8",
+        "Beer Name": "Barrel Aged Brrrbon (Brothers' Reserve Series)",
+        "Alcohol": "118",
+        "Brewery": "Widmer Brothers Brewing Company",
+        "Beer Type": "Winter Warmer"
+    },
+    "9": {
+        "Placement": "9",
+        "Beer Name": "Santo Ron Diego",
+        "Alcohol": "114",
+        "Brewery": "The Lost Abbey",
+        "Beer Type": "Strong Ale - American"
+    },
+    "10": {
+        "Placement": "10",
+        "Beer Name": "Wulver",
+        "Alcohol": "112",
+        "Brewery": "Thirsty Dog Brewing Company",
+        "Beer Type": "Scotch Ale / Wee Heavy"
+    }
+}
