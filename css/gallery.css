@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+.mySlides {
+  margin-top: 100px;
+  display: block;
+  margin-left: 175px;
+  margin-right: 260px;
+  width: 70%;
+  text-align:center;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 20%;
+  width: auto;
+  padding: 3px;
+  margin-top: -10px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  color: whitesmoke;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #505767;
+}
+
+.numbertext {
+  color: whitesmoke;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #A0AECD;
+  border-radius: 0 6px 0 6px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 10px;
+  color: #000000;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width:20%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
