@@ -245,7 +245,6 @@ var data = {
 };
 
 var options = {
-    indexAxis: 'y',
     legend: {
         display: true,
         fillStyle: 'red',
@@ -291,6 +290,7 @@ var options = {
 var topChart =  new Chart('topChart-0', {
     plugins: [ChartDataLabels], /*https://chartjs-plugin-datalabels.netlify.com*/
     type: 'bar',
+    indexAxis: 'y',
     data: data,
     options: options
 });
