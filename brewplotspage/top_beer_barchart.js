@@ -249,7 +249,7 @@ var topBeerData = {
         backgroundColor:'rgb(142,124,195)',
         borderColor:'rgb(142,124,195)',
         borderWidth: 2
-    }]
+    } ]
 
 
     // data: topBeersObjects[0].attribute_score,
@@ -317,9 +317,9 @@ function changeChart(index) {
 };
 
 var header = document.getElementById('beerDiv');
-var btns = document.getElementsByClassName('btn');
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function() {
+var btnsH = document.getElementsByClassName('btnH');
+for (var i = 0; i < btnsH.length; i++) {
+    btnsH[i].addEventListener('click', function() {
         var current = document.getElementsByClassName('active');
         current[0].className = current[0].className.replace(' active', '');
         this.className += ' active';

@@ -13,3 +13,12 @@
     background-color: #e4ad7a;
     color: white;
 }
+
+.btnH {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: whitesmoke;
+  cursor: pointer;
+  font-size: 15px;
+}
