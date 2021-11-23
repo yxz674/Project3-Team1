@@ -242,10 +242,20 @@ var topBeersObjects = [
 
 var topBeerData = {
     labels: topBeersObjects[0].beer_name,
-    data: topBeersObjects[0].attribute_score,
-    backgroundColor:'rgb(142,124,195)',
-    borderColor:'rgb(142,124,195)',
-    borderWidth: 2
+    datasets: [ {
+        label: topBeersObjects[0].beer_name,
+        data: topBeersObjects[0].attribute_score,
+        /* global setting */
+        backgroundColor:'rgb(142,124,195)',
+        borderColor:'rgb(142,124,195)',
+        borderWidth: 2
+    }]
+
+
+    // data: topBeersObjects[0].attribute_score,
+    // backgroundColor:'rgb(142,124,195)',
+    // borderColor:'rgb(142,124,195)',
+    // borderWidth: 2
 };
 
 var options = {
@@ -299,9 +309,9 @@ var topChart =  new Chart('chart-0', {
 });
 
 function changeChart(index) {
-    topChart.topBeerData.forEach(function(data) {
-        topBeerData.label = topBeersObjects[index].beer_name;
-        topBeerData.data = topBeersObjects[index].attribute_score;
+    topChart.topBeerData.datasets.forEach(function(dataset) {
+        dataset.label = topBeersObjects[index].beer_name;
+        dataset.data = topBeersObjects[index].attribute_score;
     });
     topChart.update();
 };
