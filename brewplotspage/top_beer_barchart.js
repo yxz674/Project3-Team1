@@ -296,7 +296,7 @@ var topChart =  new Chart('topChart-0', {
 });
 
 function changeChart(index) {
-    topChart.data.datasets.forEach(function(dataset) {
+    data.datasets.forEach(function(dataset) {
         // data.label = topBeersObjects[index].beer_name;
         dataset.label = topBeersObjects[index].beer_name;
         dataset.data = topBeersObjects[index].attribute_score;
