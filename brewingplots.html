@@ -147,9 +147,26 @@
                 <option value="wyoming">Wyoming</option>
             </select>
           </div>
-          <div class="col-md-5 text-center">
-            <h4>Comparing XXXXXXXXXX</h4>
-            <div id=""></div>
+          <div class="col-md-4 text-center">
+            <h4>Top Ten Beers by Beer Attribute</h4>
+            <div id="beerDiv">
+              <link rel="stylesheet" href="css\brewingbarplot.css">
+              <button class="btn active" onclick="changeChart(0)">Rating</button>
+              <button class="btn" onclick="changeChart(1)">Astringency</button>
+              <button class="btn" onclick="changeChart(2)">ABV</button>
+              <button class="btn" onclick="changeChart(3)">Alcohol</button>
+              <button class="btn" onclick="changeChart(4)">Bitterness</button>
+              <button class="btn" onclick="changeChart(5)">Body</button>
+              <button class="btn" onclick="changeChart(6)">Fruitiness</button>
+              <button class="btn" onclick="changeChart(7)">Hoppiness</button>
+              <button class="btn" onclick="changeChart(9)">IBU</button>
+              <button class="btn" onclick="changeChart(10)">Maltiness</button>
+              <button class="btn" onclick="changeChart(11)">Saltiness</button>
+              <button class="btn" onclick="changeChart(12)">Sourness</button>
+              <button class="btn" onclick="changeChart(13)">Sweetness</button>
+            </div>
+            <canvas id="topChart-0"></canvas>
+            <hr>
           </div>
         </div>
     </div>
@@ -157,274 +174,7 @@
     <div id="plot"></div>
     <div id="pie"></div>
     
-    <!-- top ten filterable chart -->
-    <div class="dropdown text-center" >
-      <h3 class="text-center"> Select an attribute to find the top 10 beers</h3>
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
-        Top Ten
-      </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        
-      </div>
-      <table border="1" style="margin:5%;"class="dataframe">
-        <thead>
-          <tr style="text-align: right;">
-            <th></th>
-            <th>Beer Name</th>
-            <th>Beer Type</th>
-            <th>Brewery</th>
-            <th>Description</th>
-            <th>ABV</th>
-            <th>Ave Rating</th>
-            <th>Astringency</th>
-            <th>Body</th>
-            <th>Alcohol</th>
-            <th>Bitter</th>
-            <th>Sweet</th>
-            <th>Sour</th>
-            <th>Salty</th>
-            <th>Fruits</th>
-            <th>Hoppy</th>
-            <th>Spices</th>
-            <th>Malty</th>
-            <th>Avg IBU</th>
-          </tr>
-          <tr>
-            <th>Placement</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="text-center">1</th>
-            <td>Schorschbock 57%</td>
-            <td>Bock - Eisbock</td>
-            <td>Schorschbräu</td>
-            <td>Notes:</td>
-            <td>57.50</td>
-            <td>2.97</td>
-            <td>0</td>
-            <td>7</td>
-            <td>17</td>
-            <td>3</td>
-            <td>9</td>
-            <td>6</td>
-            <td>0</td>
-            <td>10</td>
-            <td>0</td>
-            <td>2</td>
-            <td>4</td>
-            <td>30.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">2</th>
-            <td>Schorschbock 31%</td>
-            <td>Bock - Eisbock</td>
-            <td>Schorschbräu</td>
-            <td>Notes:</td>
-            <td>30.86</td>
-            <td>3.34</td>
-            <td>4</td>
-            <td>5</td>
-            <td>14</td>
-            <td>2</td>
-            <td>16</td>
-            <td>6</td>
-            <td>0</td>
-            <td>10</td>
-            <td>2</td>
-            <td>4</td>
-            <td>10</td>
-            <td>30.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">3</th>
-            <td>Samuel Adams UtopiasBoston Beer Company (Samuel Adams)</td>
-            <td>Strong Ale - American</td>
-            <td>Boston Beer Company (Samuel Adams)</td>
-            <td><div class="overflow">Notes:Truly the epitome of brewing's two thousand year evolution, Samuel Adams Utopias® offers a flavor not just unlike any other beer but unlike any other beverage in the world. Each release is a blend of batches, some having been aged up to 16 years in the barrel room of our Boston Brewery, in a variety of woods. We aged a portion of the beer in hand-selected, single-use bourbon casks from the award-winning Buffalo Trace Distillery. Some of the latest batches also spent time in Portuguese muscatel finishing casks, as well as sherry, brandy and Cognac casks. This flavorful, slightly fruity brew has a sweet, malty flavor that is reminiscent of a deep, rich vintage port, fine cognac or aged sherry.2019 Vintage aged in Buffalo Trace barrels and finished in Aquavit, Caracavelos, Ruby Port, Cognac, and Medeira Barrels.</div></td>
-            <td>28.00</td>
-            <td>4.54</td>
-            <td>8</td>
-            <td>44</td>
-            <td>64</td>
-            <td>30</td>
-            <td>108</td>
-            <td>18</td>
-            <td>0</td>
-            <td>76</td>
-            <td>13</td>
-            <td>42</td>
-            <td>107</td>
-            <td>70.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">4</th>
-            <td>My Name Is Legion</td>
-            <td>Bock - Eisbock</td>
-            <td>Lehe Pruulikoda</td>
-            <td>Notes:</td>
-            <td>22.00</td>
-            <td>3.56</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>0</td>
-            <td>30.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">5</th>
-            <td>Colossus</td>
-            <td>Strong Ale - American</td>
-            <td>DuClaw Brewing Company</td>
-            <td><div class="overflow">Notes:Brewed to push the limits of our own skills and imagination, Colossus is dark amber in color and full-bodied with a perceptively sweet flavor profile accented by notes of apple, and a surprisingly tame alcohol presence. This astounding alcohol content is achieved through fermentation alone; no alcohol is introduced at packaging nor it distilled. Multiple grains are used in conjunction with three different yeast strains to produce a beer that simply defies classification… and most laws of nature. One sip of this behemoth brew and you’ll agree: Sometimes size does matter!2006 Batch - 20.0% ABV2011 Batch - 21.92% ABV2014 Batch - 17.3% ABV2015 Batch - 21.0% ABV2018 Batch - 20.0% ABV</div></td>
-            <td>20.00</td>
-            <td>3.75</td>
-            <td>11</td>
-            <td>59</td>
-            <td>106</td>
-            <td>23</td>
-            <td>151</td>
-            <td>61</td>
-            <td>1</td>
-            <td>90</td>
-            <td>16</td>
-            <td>56</td>
-            <td>69</td>
-            <td>70.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">6</th>
-            <td>Chocolate Rain</td>
-            <td>Stout - American Imperial</td>
-            <td>The Bruery</td>
-            <td><div class="overflow">Notes:Black Tuesday with Vanilla Bean &amp; Cocoa Nibs.2011: 18.5% ABV 2012: 19.5% ABV2013: 18.0% ABV2014: 18.5% ABV2015: 18.4% ABV2016: 19.7% ABV2017: 19.6% ABV2018: 19.5% ABV2019: 19.5% ABV</div></td>
-            <td>19.60</td>
-            <td>4.59</td>
-            <td>6</td>
-            <td>82</td>
-            <td>51</td>
-            <td>27</td>
-            <td>69</td>
-            <td>7</td>
-            <td>0</td>
-            <td>14</td>
-            <td>5</td>
-            <td>25</td>
-            <td>88</td>
-            <td>65.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">7</th>
-            <td>Black Tuesday</td>
-            <td>Stout - American Imperial</td>
-            <td>The Bruery</td>
-            <td><div class="overflow">Notes:Our infamous Black Tuesday is an imperial stout aged in bourbon barrels for over a year. Rich caramel, toasted malt, vanilla, burnt wood and anise are just a few of the many flavors in this rich, decadent imperial stout.2009: 19.5% ABV 2010: 18.2% ABV 2011: 18.3% ABV 2012: 19.2% ABV2013: 18.9% ABV2014: 19.7% ABV2015: 19.9% ABV2016: 20.3% ABV2017: 19.5% ABV2018: 19.5% ABV2019: 19.4% ABV</div></td>
-            <td>19.50</td>
-            <td>4.59</td>
-            <td>3</td>
-            <td>70</td>
-            <td>95</td>
-            <td>25</td>
-            <td>106</td>
-            <td>17</td>
-            <td>1</td>
-            <td>43</td>
-            <td>3</td>
-            <td>30</td>
-            <td>126</td>
-            <td>65.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">8</th>
-            <td>Barrel Roll No. 3 Pugachev's Cobra</td>
-            <td>Stout - Russian Imperial</td>
-            <td>Hangar 24 Brewing</td>
-            <td>Notes:</td>
-            <td>18.90</td>
-            <td>4.38</td>
-            <td>7</td>
-            <td>85</td>
-            <td>53</td>
-            <td>25</td>
-            <td>109</td>
-            <td>5</td>
-            <td>0</td>
-            <td>11</td>
-            <td>4</td>
-            <td>17</td>
-            <td>123</td>
-            <td>70.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">9</th>
-            <td>Double Ice Bock</td>
-            <td>Bock - Eisbock</td>
-            <td>Southampton Publick House</td>
-            <td><div class="overflow">Notes:Southampton Double Ice Bock is based off of a traditional German-style Bock beer. This German lager beer is rich and malty and brewed to an alcohol strength of 6-7%. “Ice Bock” is produced when a Bock beer is partially frozen in order to increase it’s alcohol content. In this process, some of the water content turns to ice, effectively strengthening the flavor and alcohol of the beer. We take this process one step further. After the initial freezing, the beer is decanted off the ice and frozen a second time. The resulting beer is a deceptively smooth and amazingly strong lager.</div></td>
-            <td>18.00</td>
-            <td>4.01</td>
-            <td>15</td>
-            <td>59</td>
-            <td>79</td>
-            <td>15</td>
-            <td>171</td>
-            <td>49</td>
-            <td>0</td>
-            <td>77</td>
-            <td>13</td>
-            <td>10</td>
-            <td>119</td>
-            <td>30.0</td>
-          </tr>
-          <tr>
-            <th class="text-center">10</th>
-            <td>World Wide Stout</td>
-            <td>Stout - American Imperial</td>
-            <td>Dogfish Head Craft Brewery</td>
-            <td><div class="overflow">Notes:Brewed with a ridiculous amount of barley, World Wide Stout is dark, rich, roasty and complex. This ageable ale clocks in at 15-20% ABV and has a depth more in line with a fine port than with a can of cheap, mass-marketed beer.70 IBU</div></td>
-            <td>18.00</td>
-            <td>4.28</td>
-            <td>7</td>
-            <td>76</td>
-            <td>71</td>
-            <td>67</td>
-            <td>102</td>
-            <td>26</td>
-            <td>0</td>
-            <td>56</td>
-            <td>22</td>
-            <td>20</td>
-            <td>129</td>
-            <td>65.0</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    
     <!-- bar chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
@@ -434,6 +184,6 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="brewplotspage\brewingdta.js"></script>
     <script src="brewplotspage\brewingpieplot.js"></script>
-    <script src="brewplotspage\top_beers.js"></script>
+    <script src="brewplotspage\top_beer_barchart.js"></script>
   </body>
 </html>
