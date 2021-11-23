@@ -68,7 +68,10 @@ function init() {
 
   var layout = {
     height: 500,
-    width: 650,
+    width: 1000,
+    margin:{
+        l:500
+    },
     paper_bgcolor:"rgba(0,0,0,0)"
   };
 
