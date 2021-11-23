@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- pie chart js -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css\style.css">
+    <title>BHC Beer&Brewing Info</title>
+    
+    
+
+    <!-- Marker cluster JavaScript code -->
+    <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+    <!-- Marker cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+    <!-- d3 reference -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="logo" alt=" beer logo image" src="img\logo.png"/>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="beerdata.html">Brewery List</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="mapping.html">Mapping</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="brewingplots.html">Data Dashboard</a>
+          </li>
+          <li>
+            <a class="main-nav-link nav-cta" href="index.html">Home</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+       
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+              <h4>Top Ten Beers by Beer Attribute</h4>
+                <div id="beerDiv">
+                  <link rel="stylesheet" href="css\brewingbarplot.css">
+                  <button class="btn active" onclick="changeChart(0)">ABV</button>
+                  <button class="btn" onclick="changeChart(1)">Astringency</button>
+                  <button class="btn" onclick="changeChart(2)">Alcohol</button>
+                  <button class="btn" onclick="changeChart(3)"><Body></Body></button>
+                  <button class="btn" onclick="changeChart(4)">Bitterness</button>
+                  <button class="btn" onclick="changeChart(5)">Fruitiness</button>
+                  <button class="btn" onclick="changeChart(6)">Hoppiness</button>
+                  <button class="btn" onclick="changeChart(7)">IBU</button>
+                  <button class="btn" onclick="changeChart(9)">Maltiness</button>
+                  <button class="btn" onclick="changeChart(10)">Rating</button>
+                  <button class="btn" onclick="changeChart(11)">Saltiness</button>
+                  <button class="btn" onclick="changeChart(12)">Sourness</button>
+                  <button class="btn" onclick="changeChart(13)">Spices</button>
+                  <button class="btn" onclick="changeChart(14)">Sweetness</button>
+
+                  <canvas id="plot-0">
+                      <div class="chart-container">
+                          <canvas id="myChart"></canvas>
+                  </canvas>
+                </div>
+              
+            <hr>
+          </div>
+        </div>
+       
+
+      
+    </div> <!--my graph-->
+
+    
+
+    <!-- <div id="plot"></div>
+    <div id="pie"></div> -->
+    
+    
+    <!-- bar chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <script src="brewplotspage\brewingbarplot.js"></script>
+    <script src="brewplotspage\top_beer_barchart.js"></script>
+
+    <!-- pie chart js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="brewplotspage\brewingdta.js"></script>
+    <script src="brewplotspage\brewingpieplot.js"></script>
+  </body>
+</html>

@@ -1,6 +1,5 @@
 var topBeersObjects = [
-    {
-        label: "abv",
+    {label: "abv",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:[' Schorschbock 57%',' Schorschbock 31%',
         'Samuel Adams UtopiasBoston Beer Company (Samuel Adams)',
@@ -16,8 +15,7 @@ var topBeersObjects = [
         'Hangar 24 Brewing', 'Southampton Publick House',
         'Dogfish Head Craft Brewery']
     },
-    {
-        label: "astringency",
+    {label: "astringency",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Montmorency Vs Balaton','Sour Reserve','Hometown Blonde',
         'Experimental Raspberry','Sour In The Rye - Kumquats','Iris','Brut IPA',
@@ -32,8 +30,7 @@ var topBeersObjects = [
         'Brasserie Cantillon','Anderson Valley Brewing Company',
         'Great Lakes Brewing Co.','The Lost Abbey','Peak Organic Brewing Company']
     },
-    {
-        label: "alcohol",
+    {label: "alcohol",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Pumking - Rum Barrel Aged',
         "Brewer's Reserve Bourbon Barrel Quadruple Ale",
@@ -51,8 +48,7 @@ var topBeersObjects = [
         'Hardywood Park Craft Brewery','Widmer Brothers Brewing Company',
         'The Lost Abbey','Thirsty Dog Brewing Company']
     },
-    {
-        label: "body",
+    {label: "body",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Victory At Sea - Peanut Butter','Chocolate Milk Stout','Moo-HooChiato',
         'The Chocolate Manifesto','White Chocolate Moo-Hoo Milk Stout',
@@ -70,8 +66,7 @@ var topBeersObjects = [
         'Tyranena Brewing Company','Charleville Vineyard Microbrewery',
         'Tree House Brewing Company','Tree House Brewing Company']
     },
-    {
-        label: "bitterness",
+    {label: "bitterness",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Earl Coffee Oatmeal Stout','Black Racer','Java Stout',
         'Heavy Seas Black Cannon','Regular Coffee',
@@ -88,8 +83,7 @@ var topBeersObjects = [
         'Brau Brothers Brewing Co. LLC','Tyranena Brewing Company',
         'Surly Brewing Company']
     },
-    {
-        label: "fruitiness",
+    {label: "fruitiness",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Sour In The Rye - Kumquats','King Julius','Juice Machine','Very Green',
         'JJJuliusss','Femme Fatale Yuzu Pale','Montmorency Vs Balaton',
@@ -104,8 +98,7 @@ var topBeersObjects = [
         'New Glarus Brewing Company','Tree House Brewing Company',
         'Hill Farmstead Brewery']
     },
-    {
-        label: "hoppiness",
+    {label: "hoppiness",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['MMMKAY','Trinity IPA','Pursuit Of Hoppiness','The Oracle',
         'St-Ambroise India Pale Ale','Moondog Ale', "Triple Hop'd Lager", 'IPL',
@@ -121,8 +114,7 @@ var topBeersObjects = [
         'Great Lakes Brewing Co.','Bitburger Brauerei','Straub Brewery',
         'Brauerei Hofstetten Krammer GmbH & Co. KG','Columbus Brewing Company']
     },
-    {
-        label: "ibu",
+    {label: "ibu",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name: ['Hoptimum', 'Lake Erie Monster', 'Pliny The Younger',
         'Unearthly (Imperial India Pale Ale)', 'Permanent Funeral',
@@ -138,8 +130,7 @@ var topBeersObjects = [
         'Odell Brewing Company','Oskar Blues Grill & Brew',
         'New England Brewing Co.','Ballast Point Brewing Company']
     },
-    {
-        label: "maltiness",
+    {label: "maltiness",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Victory At Sea - Peanut Butter','Sweet Baby Jesus!',
         'Raincloud - Peanut Butter', "Down 'N Dirty Chocolate Oatmeal Stout",
@@ -157,8 +148,7 @@ var topBeersObjects = [
         'Tree House Brewing Company','Trillium Brewing Company',
         'Founders Brewing Company','Off Color Brewing']
     },
-    {
-        label: "rating",
+    {label: "rating",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Eisbock','Marshmallow Handjee','Heady Topper','King Julius',
         'Zenne Y Frontera','Very Hazy','Pliny The Younger','Drone Witch',
@@ -174,8 +164,7 @@ var topBeersObjects = [
         'Heirloom Rustic Ales','Goose Island Beer Co.',
         'Tree House Brewing Company']
     },
-    {
-        label: "saltiness",
+    {label: "saltiness",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Gozu','Hitachino Nest Anbai Ale','Old Pro',
         '26.2 BrewBoston Beer Company (Samuel Adams)','Gose','Salty Scot',
@@ -189,8 +178,7 @@ var topBeersObjects = [
         'Parallel 49 Brewing Company','Perennial Artisan Ales','Ritterguts Gose',
         'Night Shift Brewing','Almanac Beer Co.']
     },
-    {
-        label: "sourness",
+    {label: "sourness",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Sour In The Rye - Kumquats','Sour Reserve','Gozu',
         'Experimental Raspberry','Incorrigible','La Roja - Grand Reserve',
@@ -204,8 +192,7 @@ var topBeersObjects = [
         'Jolly Pumpkin Artisan Ales','Rivertown Brewery & Barrel House',
         'Upland Brewing Company','Trinity Brewing Company','De Cam Geuzestekerij']
     },
-    {
-        label: "spices",
+    {label: "spices",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:["Billy's Chilies Beer (Timberline Series)", 'Chipotle Smoked Porter',
         'Underlig Jul', "Benji's Chipotle Smoked Imperial Porter", 'Chipotle Ale',
@@ -220,8 +207,7 @@ var topBeersObjects = [
         'Rogue Ales','Six Rivers Brewery','Ballast Point Brewing Company',
         "Jack's Abby Brewing", 'Westbrook Brewing Co.','Ska Brewing Co.']
     },
-    {
-        label: "sweetness",
+    {label: "sweetness",
         placement: [1,2,3,4,5,6,7,8,9,10],
         beer_name:['Braggot','Double Or Nothing','Box Of Chocolate','Équinoxe Du Printemps',
         'Dark Heathen Triple Bock', "Brother Adam's Bragget Ale",
@@ -238,9 +224,9 @@ var topBeersObjects = [
         'Allagash Brewing Company','New Glarus Brewing Company']
     },
     
-];
+]
 
-var topBeerData = {
+var data = {
     labels: topBeersObjects[0].beer_name,
     datasets: [ {
         label: topBeersObjects[0].beer_name,
@@ -249,7 +235,7 @@ var topBeerData = {
         backgroundColor:'rgb(142,124,195)',
         borderColor:'rgb(142,124,195)',
         borderWidth: 2
-    } ]
+    }]
 
 
     // data: topBeersObjects[0].attribute_score,
@@ -259,6 +245,7 @@ var topBeerData = {
 };
 
 var options = {
+    indexAxis: 'y',
     legend: {
         display: true,
         fillStyle: 'red',
@@ -301,15 +288,16 @@ var options = {
     }
 };
 
-var topChart =  new Chart('chart-0', {
+var topChart =  new Chart('topChart-0', {
     plugins: [ChartDataLabels], /*https://chartjs-plugin-datalabels.netlify.com*/
     type: 'bar',
-    data: topBeerData,
+    data: data,
     options: options
 });
 
 function changeChart(index) {
-    topChart.topBeerData.datasets.forEach(function(dataset) {
+    topChart.data.datasets.forEach(function(dataset) {
+        // data.label = topBeersObjects[index].beer_name;
         dataset.label = topBeersObjects[index].beer_name;
         dataset.data = topBeersObjects[index].attribute_score;
     });
